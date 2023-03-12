@@ -28,8 +28,6 @@ int SumPositive (int[] array)
 
 }
 
-
-
 int SumNegative(int[] array)
 {
     int sum = 0;
@@ -41,7 +39,6 @@ int SumNegative(int[] array)
     return sum;
 
 }
-
 
 int[] array = GetArray();
 Console.WriteLine(String.Join(" ", array));
