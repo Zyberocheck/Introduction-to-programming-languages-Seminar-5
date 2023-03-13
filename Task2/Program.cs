@@ -12,39 +12,54 @@
 
 
 
-int [] Arr()
-{
-    int[] array = new int[4];
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(-4, 8);
-               
-    }
-    return array;
-}
 
 
 // int[] arr = {-4, -8, 8, 2};
 
 
-void NegaTiv( int[] array)
-{
-for (int i = 0; i < array.Length; i++)
-{
+// void NegaTiv( int[] array)
+// {
+// for (int i = 0; i < array.Length; i++)
+// {
 
-    array[i]*=-1;
+//     array[i]*=-1;
     
-    Console.Write(array[i] + " ");
+//     Console.Write(array[i] + " ");
 
+// }
+
+// }
+
+
+// int[] array = Arr();
+// Console.WriteLine(String.Join(" ", array));
+// NegaTiv(array);
+
+
+
+int [] Arr(int qwe)
+{
+    int[] array = new int[qwe];
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(4, 8);
+               
+    }
+    return array;
+}
+Console.WriteLine("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+
+bool HearPoint(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] == a)
+        return true;   
+    }
+    return false;  
 }
 
-}
-
-
-int[] array = Arr();
+int[] array = Arr(6);
 Console.WriteLine(String.Join(" ", array));
-NegaTiv(array);
-
-
-
-
+Console.WriteLine(HearPoint(array));
