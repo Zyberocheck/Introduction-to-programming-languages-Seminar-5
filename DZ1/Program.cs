@@ -12,6 +12,7 @@
 // [3 7 22 2 78] -> 76
 
 
+
 int [] Arr()
 {
     int[] randarray = new int[20];
