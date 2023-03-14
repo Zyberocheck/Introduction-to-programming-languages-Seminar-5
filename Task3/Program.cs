@@ -56,7 +56,7 @@ int [] Mult(int[] randArray)
     {
         smallrandArray[i] = randArray[i] * randArray[randArray.Length-1-i];
     }
-    if(size%2==0)
+    if(randArray.Length%2==1)
        smallrandArray[size-1] = randArray[randArray.Length/2];
     return smallrandArray;
 }
