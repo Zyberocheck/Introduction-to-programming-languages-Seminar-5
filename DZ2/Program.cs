@@ -9,10 +9,10 @@
 
 int [] Arr()
 {
-    int[] randarray = new int[7];
+    int[] randarray = new int[13];
     for (int i = 0; i < randarray.Length; i++)
     {
-        randarray[i] = new Random().Next(1, 20);
+        randarray[i] = new Random().Next(1, 5);
                
     }
     return randarray;
@@ -24,7 +24,7 @@ int SumNumber(int[]arrays)
     int sum = 0;
     for (int i = 0; i < arrays.Length; i++)
     {
-        if(arrays[i] % 2 != 0)
+        if(i % 2 > 0)
         {
             sum+=arrays[i];
         }
