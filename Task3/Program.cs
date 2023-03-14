@@ -35,18 +35,18 @@
 
 int [] Arr()
 {
-    int[] randarray = new int[6];
-    for (int i = 0; i < randarray.Length; i++)
+    int[] array = new int[5];
+    for (int i = 0; i < array.Length; i++)
     {
-        randarray[i] = new Random().Next(-150, 150);
+        array[i] = new Random().Next(1, 15);
                
     }
-    return randarray;
+    return array;
 }
 
-int [] randArray = Arr();
 
-int Mult(int[] randArray)
+
+int [] Mult(int[] randArray)
 {
     int size = randArray.Length/2;
     if(randArray.Length%2==1)
@@ -60,8 +60,8 @@ int Mult(int[] randArray)
        smallrandArray[size-1] = randArray[randArray.Length/2];
     return smallrandArray;
 }
-
-Console.WriteLine(String.Join(" ", Arr()));
+int [] randArray = Arr();
+Console.WriteLine(String.Join(" ", randArray));
 Console.WriteLine(String.Join(" ", Mult(randArray)));
 
 
