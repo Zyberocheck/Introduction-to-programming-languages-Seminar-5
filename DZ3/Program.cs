@@ -5,22 +5,23 @@
 
 
 
-int [] Arr()
+double [] Arr()
 {
-    int[] randarray = new int[6];
+    double [] randarray = new double [6];
     for (int i = 0; i < randarray.Length; i++)
     {
-        randarray[i] = new Random().Next(1,100);
+        randarray[i] = new Random().NextDouble();
+        randarray[i] = Math.Round(randarray[i], 2);
                
     }
     return randarray;
 }
 
-int[] arraymm =Arr();
+double[] arraymm =Arr();
 
-int Maxi(int[] arraymm)
+double Maxi(double[] arraymm)
 {
-    int max = arraymm[0];
+    double max = arraymm[0];
     for (int i = 0; i < arraymm.Length; i++)
     {
         if (arraymm[i]>max)
@@ -31,9 +32,9 @@ int Maxi(int[] arraymm)
     return max;
 }
 
-int Mini(int[] arraymm)
+double Mini(double[] arraymm)
 {
-    int min = arraymm[0];
+    double min = arraymm[0];
     for (int i = 0; i < arraymm.Length; i++)
     {
         if (arraymm[i]<min)
@@ -44,13 +45,18 @@ int Mini(int[] arraymm)
     return min;
 }
 
-Console.WriteLine($"Наш массив: [{String.Join(", ", arraymm)}]");
+
+double result = Math.Round(Maxi(arraymm) - Mini(arraymm), 2);
+
+Console.WriteLine();
+Console.WriteLine($"Наш массив: [{String.Join("; ", arraymm)}]");
 Console.WriteLine();
 Console.WriteLine($"Максимальное число в нем: {String.Join(" ", Maxi(arraymm))}");
 Console.WriteLine();
 Console.WriteLine($"Минимальное число в нем: {String.Join(" ", Mini(arraymm))}");
 Console.WriteLine();
-Console.WriteLine($"Разница между максимальным и минимальным числом: {String.Join(" ", Maxi(arraymm) - Mini(arraymm))}");
+Console.WriteLine($"Разница между максимальным и минимальным числом: {result}"); // String.Join(" ", Maxi(arraymm) - Mini(arraymm))
+Console.WriteLine();
 
 
 
